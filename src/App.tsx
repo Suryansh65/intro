@@ -1,12 +1,16 @@
-import Anyname from "./Intro/intro";
+import MyButton from "./Intro/intro";
 // No need to give .tsx extension -> react will handle automatically
+import Hooks from "./Intro/hooks";
 
 function App(){
   return (
     <div>
-      <Anyname />
+      <MyButton />
+      <MyButton />
+      /*Both button will preserve their state independently and do not affect each other states.*/
       <MyProfile />
       <ListItems />
+      <Hooks />
     </div>
   )
 }
