@@ -1,16 +1,18 @@
-import MyButton from "./Intro/intro";
+// import MyButton from "./Intro/intro";
 // No need to give .tsx extension -> react will handle automatically
-import Hooks from "./Intro/hooks";
+// import Hooks from "./Intro/hooks";
+import Profile from "./Intro/props";
+
 
 function App(){
   return (
     <div>
-      <MyButton />
-      <MyButton />
-      /*Both button will preserve their state independently and do not affect each other states.*/
-      <MyProfile />
+      {/* <MyButton />
+      <MyButton /> */}
+      {/* <MyProfile />
       <ListItems />
-      <Hooks />
+      <Hooks /> */}
+      <Profile />
     </div>
   )
 }
@@ -46,6 +48,12 @@ return (
   </div>
 )
 
+*/
+
+/*Question: Why we need to return a single Fragment in React Component?: The JSX transformed into JS object and you can't return 2 or more objects from a function without wrapping them into an array. Also we can't return 2 or more JSX tags without wrapping them into another JSX tag.*/
+
+/*
+Question: Why we can't use "className" instead of "class" in React?: As JSX converts to JS so class is reserved keyword so we can't use this, instead we use "className".
 */
 
 const user = {
