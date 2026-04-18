@@ -1,10 +1,12 @@
 // import MyButton from "./Intro/intro";
 // No need to give .tsx extension -> react will handle automatically
 // import Hooks from "./Intro/hooks";
-import Profile from "./Intro/props";
+// import Profile from "./Intro/props";
+import { Gallery } from "./Intro/props";
+// import Card from "./Intro/card/card";
 
 
-function App(){
+function App() {
   return (
     <div>
       {/* <MyButton />
@@ -12,9 +14,12 @@ function App(){
       {/* <MyProfile />
       <ListItems />
       <Hooks /> */}
-      <Profile />
+      {/* <Card>
+        <Profile />
+      </Card> */}
+      <Gallery />
     </div>
-  )
+  );
 }
 
 export default App;
@@ -57,43 +62,38 @@ Question: Why we can't use "className" instead of "class" in React?: As JSX conv
 */
 
 const user = {
-  name: 'John Doe',
-  imageUrl: 'https://react.dev/images/docs/scientists/yXOvdOSs.jpg',
+  name: "John Doe",
+  imageUrl: "https://react.dev/images/docs/scientists/yXOvdOSs.jpg",
   imagSize: 90,
-}
+};
 
-export function MyProfile(){
-  return(
+export function MyProfile() {
+  return (
     <div>
       <h1>{user.name}</h1>
-      <img 
-      src={user.imageUrl}
-      className="avatar"
-      alt={'Photo of' + user.name}
-      style={{
-        width: user.imagSize,
-        height:user.imagSize
-      }}
-      
+      <img
+        src={user.imageUrl}
+        className="avatar"
+        alt={"Photo of" + user.name}
+        style={{
+          width: user.imagSize,
+          height: user.imagSize,
+        }}
       />
     </div>
-  )
+  );
 }
 
 /*using for loop to display items */
 const products = [
-  {title: 'Cabbage',id:1},
-  {title: 'Garlic',id:2},
-  {title: 'Apple',id:3},
-]
+  { title: "Cabbage", id: 1 },
+  { title: "Garlic", id: 2 },
+  { title: "Apple", id: 3 },
+];
 
-export function ListItems(){
-  const listItems = products.map(product =>
-    <li key={product.id} >
-      {product.title}
-    </li>
-  );
-  return (
-    <ul>{listItems}</ul>
-  )
+export function ListItems() {
+  const listItems = products.map((product) => (
+    <li key={product.id}>{product.title}</li>
+  ));
+  return <ul>{listItems}</ul>;
 }
