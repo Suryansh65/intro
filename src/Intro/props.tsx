@@ -103,7 +103,7 @@ export function Gallery() {
         ]}
         discovery="polonium (chemical element)"
       />
-
+{/* we can use "" instead of {""} while giving string props*/}
          <Profile
         name={"Katsuko Saruhashi"}
         imageId={"YfeOqp2"}

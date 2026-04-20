@@ -2,7 +2,9 @@
 // No need to give .tsx extension -> react will handle automatically
 // import Hooks from "./Intro/hooks";
 // import Profile from "./Intro/props";
-import { Gallery } from "./Intro/props";
+// import { Gallery } from "./Intro/props";
+import DrinkList from "./Intro/conditional_rendering";
+// import PackingList from "./Intro/conditional_rendering"
 // import Card from "./Intro/card/card";
 
 
@@ -17,7 +19,9 @@ function App() {
       {/* <Card>
         <Profile />
       </Card> */}
-      <Gallery />
+      {/* <Gallery /> */}
+      {/* <PackingList /> */}
+        <DrinkList />
     </div>
   );
 }
