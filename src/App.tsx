@@ -4,10 +4,11 @@
 // import Profile from "./Intro/props";
 // import { Gallery } from "./Intro/props";
 // import DrinkList from "./Intro/conditional_rendering";
-import PureAndImpure from "./Intro/PureAndImpure";
+// import PureAndImpure from "./Intro/PureAndImpure";
+// import { AlertButton } from "./Intro/eventHandlers";
+import { Toolbar } from "./Intro/eventHandlers";
 // import PackingList from "./Intro/conditional_rendering"
 // import Card from "./Intro/card/card";
-
 
 function App() {
   return (
@@ -22,8 +23,16 @@ function App() {
       </Card> */}
       {/* <Gallery /> */}
       {/* <PackingList /> */}
-        {/* <DrinkList /> */}
-        <PureAndImpure />
+      {/* <DrinkList /> */}
+      {/* <PureAndImpure /> */}
+      {/* <Button /> */}
+      {/* <AlertButton message={"Playing..."}>Play Movie</AlertButton>
+      <AlertButton message={"Uploading Image..."}>Upload Image</AlertButton> */}
+
+      <Toolbar
+        onPlayMovie={()=> alert('Play Movie...')}
+        onUploadImage={()=>alert('Uploading...')}
+      />
     </div>
   );
 }
