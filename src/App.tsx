@@ -6,11 +6,16 @@
 // import DrinkList from "./Intro/conditional_rendering";
 // import PureAndImpure from "./Intro/PureAndImpure";
 // import { AlertButton } from "./Intro/eventHandlers";
-import { Toolbar } from "./Intro/eventHandlers";
+// import { Toolbar } from "./Intro/eventHandlers";
+// import { useState } from "react";
+// import {ThemeContext} from "./Intro/useContext/themeContext";
 // import PackingList from "./Intro/conditional_rendering"
 // import Card from "./Intro/card/card";
 
+import MyApp from "./Intro/useContext/start";
+
 function App() {
+  // const [theme,setTheme] = useState('dark');
   return (
     <div>
       {/* <MyButton />
@@ -28,11 +33,14 @@ function App() {
       {/* <Button /> */}
       {/* <AlertButton message={"Playing..."}>Play Movie</AlertButton>
       <AlertButton message={"Uploading Image..."}>Upload Image</AlertButton> */}
+    {/* <ThemeContext.Provider value={theme}>
 
       <Toolbar
         onPlayMovie={()=> alert('Play Movie...')}
         onUploadImage={()=>alert('Uploading...')}
-      />
+        />
+        </ThemeContext.Provider> */}
+        <MyApp />
     </div>
   );
 }

@@ -1,4 +1,6 @@
 import type { ReactNode } from 'react';
+import { useContext } from 'react';
+import {ThemeContext} from "./useContext/themeContext";
 
 
 type ButtonProps = {
@@ -12,8 +14,10 @@ type ToolbarProps = {
 }
 
 export default function Button({handleClick, children}:ButtonProps){
+    const theme = useContext(ThemeContext);
+    /*useContext() always looks for the closest provider above the component that calls it. It searches upwards and does not consider providers in the component from which you’re calling useContext().*/
     return (
-        <button onClick={handleClick} >
+        <button onClick={handleClick} className={`btn-${theme}`} >
             {children}
         </button>
     );
