@@ -11,8 +11,9 @@
 // import {ThemeContext} from "./Intro/useContext/themeContext";
 // import PackingList from "./Intro/conditional_rendering"
 // import Card from "./Intro/card/card";
+import MyRoutes from "./Intro/Routes/routes";
 
-import MyApp from "./Intro/useContext/start";
+// import MyApp from "./Intro/useContext/start";
 
 function App() {
   // const [theme,setTheme] = useState('dark');
@@ -40,7 +41,7 @@ function App() {
         onUploadImage={()=>alert('Uploading...')}
         />
         </ThemeContext.Provider> */}
-        <MyApp />
+        <MyRoutes />
     </div>
   );
 }
