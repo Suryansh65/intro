@@ -1,5 +1,7 @@
 import {Link, Route, Routes} from 'react-router-dom';
 import MyApp from '../useContext/start';
+import Users from '../pages/user';
+import UserProfile from '../pages/userProfile';
 
 /*
 First we need to install React Router DOM by running: npm install react-router-dom
@@ -17,10 +19,14 @@ function MyRoutes(){
                 {/*Use Link instead of <a> to prevent page reloads*/}
                 <Link to="/">Home</Link>
                 <Link to="/about">About </Link>
+                <Link to="/users">Users</Link>
             </nav>
                 {/* Define our routes */}
                 <Routes>
                     <Route path="/" element={<MyApp />} />
+                    <Route path="/about" element={<h1>About</h1>} />
+                    <Route path="/users" element={<Users />} />
+                    <Route path="/users/:id" element={<UserProfile />} />
                     <Route path="*" element={<h1>Page Not Found</h1>} />
                 </Routes>
         </div>
