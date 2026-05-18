@@ -1,6 +1,8 @@
 /*
 Anything that starts with 'use' is a hook in react.
 
+Hooks are special JavaScript functions, typically starting with the prefix "use," that allow you to utilize state and other React features within functional components without needing to write a class
+
 Remember: 
 -Hook should be used on the top of the function only.
 -It cannot be used in if block , for block, nested functions
@@ -19,6 +21,9 @@ Remember:
 */
 
 /*
+
+The useEffect hook is a built-in React function that allows you to perform side effects in functional components [5, 11]. Side effects are tasks that happen outside of the standard rendering process, such as fetching data, setting up subscriptions, or manually changing the DOM 
+
 Never change state while render - It will cause Infinite calling
 useEffect without dependency array may cause infinite calling
 useEffect with state that changes frequently

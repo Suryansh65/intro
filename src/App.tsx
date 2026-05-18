@@ -12,6 +12,7 @@
 // import PackingList from "./Intro/conditional_rendering"
 // import Card from "./Intro/card/card";
 import MyRoutes from "./Intro/Routes/routes";
+import StatusBar from "./Intro/hooks/customHooks";
 
 // import MyApp from "./Intro/useContext/start";
 
@@ -42,6 +43,7 @@ function App() {
         />
         </ThemeContext.Provider> */}
         <MyRoutes />
+        <StatusBar />
     </div>
   );
 }
