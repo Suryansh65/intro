@@ -1,0 +1,23 @@
+import {useState, useEffect} from 'react';
+export default function useStatusOnline(){
+      const [isOnline, setisOnline] = useState(true);
+    /*Thing to Remember: Only Hooks and Components can call other hooks/components inside them
+    -Hooks let you share stateful logic not state itself, each hook call is indepenedent of each other.
+    
+    */
+    useEffect(()=>{
+        function handleOnline(){
+            setisOnline(true);
+        }
+        function handleOffline(){
+            setisOnline(false);
+        }
+        window.addEventListener("online",handleOnline);
+        window.addEventListener("offline",handleOffline);
+        return()=>{
+            window.removeEventListener("online",handleOnline);
+            window.removeEventListener("offline",handleOffline);
+        };
+    },[])
+    return isOnline;
+}
