@@ -11,8 +11,9 @@
 // import {ThemeContext} from "./Intro/useContext/themeContext";
 // import PackingList from "./Intro/conditional_rendering"
 // import Card from "./Intro/card/card";
-import MyRoutes from "./Intro/Routes/routes";
-import StatusBar from "./Intro/hooks/customHooks";
+// import MyRoutes from "./Intro/Routes/routes";
+// import StatusBar from "./Intro/hooks/customHooks";
+import LoginForm from "./Intro/FormValidation/ManualFormValidation";
 
 // import MyApp from "./Intro/useContext/start";
 
@@ -42,8 +43,9 @@ function App() {
         onUploadImage={()=>alert('Uploading...')}
         />
         </ThemeContext.Provider> */}
-        <MyRoutes />
-        <StatusBar />
+        {/* <MyRoutes />
+        <StatusBar /> */}
+        <LoginForm />
     </div>
   );
 }
