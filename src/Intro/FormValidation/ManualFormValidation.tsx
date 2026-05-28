@@ -1,8 +1,16 @@
 import { useState } from "react";
+import { useRef } from "react";
+
+/*
+    This is an example of Controlled component: React use useSate to maintain the states but it create re-renders on each keystroke which affects performance. 
+
+    to resolve this issue we can use Un-controlled component like useRef but they cannot work with each keystroke , they work one time on submitting the form.
+*/
 
 export default function LoginForm(){
     const [formData, setFormData] = useState({email:"", password: ""});
     const [errors,setErrors] = useState({email:"",password:""});
+    const ageRef = useRef<HTMLInputElement>(null);
 
     const handleChange = (e:React.ChangeEvent<HTMLInputElement>)=>{
         const {name,value} = e.target;
@@ -71,6 +79,37 @@ export default function LoginForm(){
                 />
             </div>
             {errors.password && <p style={{color:"red"}} >{errors.password}</p>}
+
+            {/* Age field with useRef */}
+            <div>
+                <label htmlFor="Age">Age: </label>
+                <input type="number" 
+                name="age"
+                placeholder="Age"
+                ref={ageRef}
+                />
+            </div>
+            <div>
+                <button type="submit" >Submit</button>
+            </div>
+        </form>
+    )
+}
+
+// Un controlled component
+export function UnControlledForm(){
+    const ageRef = useRef<HTMLInputElement>(null);
+    const handleSubmit = (e:React.FormEvent<HTMLFormElement>)=>{
+        e.preventDefault();
+        console.log("Submitted value:", ageRef.current?.value);
+    }
+    return (
+        <form onSubmit={handleSubmit}>
+            <input 
+            type="number"
+            ref={ageRef}
+            placeholder="Enter Age"
+            />
             <button type="submit" >Submit</button>
         </form>
     )

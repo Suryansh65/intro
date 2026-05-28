@@ -14,6 +14,7 @@
 // import MyRoutes from "./Intro/Routes/routes";
 // import StatusBar from "./Intro/hooks/customHooks";
 import LoginForm from "./Intro/FormValidation/ManualFormValidation";
+import { UnControlledForm } from "./Intro/FormValidation/ManualFormValidation";
 
 // import MyApp from "./Intro/useContext/start";
 
@@ -46,6 +47,7 @@ function App() {
         {/* <MyRoutes />
         <StatusBar /> */}
         <LoginForm />
+        <UnControlledForm />
     </div>
   );
 }
